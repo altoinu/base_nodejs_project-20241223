@@ -105,6 +105,7 @@ const config = {
 
   // A preset that is used as a base for Jest's configuration
   // preset: undefined,
+  preset: "ts-jest",
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -185,7 +186,8 @@ const config = {
   // A map from regular expressions to paths to transformers
   // transform: undefined,
   transform: {
-    "^.+\\.(t|j)sx?$": ["@babel/preset-env", { targets: { node: "current" } }],
+    //"^.+\\.(c|m)?jsx?$": ["@babel/preset-env", { targets: { node: "current" } }],
+    "^.+\\.(c|m)?(j|t)sx?$": ["ts-jest", { targets: { node: "current" } }],
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
