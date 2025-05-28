@@ -5,5 +5,8 @@ module.exports = {
   // https://jestjs.io/docs/getting-started#generate-a-basic-configuration-file
   // https://jestjs.io/docs/getting-started#using-babel
   // https://stackoverflow.com/questions/62820035/babel-throwing-support-for-the-experimental-syntax-jsx-isnt-currently-enabled
-  presets: [["@babel/preset-env", { targets: { node: "current" } }]],
+  presets: [
+    ["@babel/preset-env", { targets: { node: "current" } }],
+    "@babel/preset-typescript",
+  ],
 };

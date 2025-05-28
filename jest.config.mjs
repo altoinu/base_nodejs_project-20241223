@@ -87,7 +87,7 @@ const config = {
   //   "json",
   //   "node"
   // ],
-  moduleFileExtensions: ["js", "mjs", "cjs"],
+  moduleFileExtensions: ["js", "mjs", "cjs", "ts", "tsx"],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
@@ -174,7 +174,7 @@ const config = {
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
-  testRegex: ["(/__tests__/.*|.*\\.(spec|test))\\.(c|m)?js$"],
+  testRegex: ["(/__tests__/.*|.*\\.(spec|test))\\.(c|m)?(j|t)sx?$"],
 
   // This option allows the use of a custom results processor
   // testResultsProcessor: undefined,
@@ -184,6 +184,9 @@ const config = {
 
   // A map from regular expressions to paths to transformers
   // transform: undefined,
+  transform: {
+    '^.+\\.(t|j)sx?$': ['@babel/preset-env', {targets: {node: 'current'}}],
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
