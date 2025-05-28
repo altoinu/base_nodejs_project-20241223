@@ -16,7 +16,10 @@ export declare const addNumbers: (value1: number, value2: number) => number;
  * @param value2 The second number.
  * @returns The number closer to zero.
  */
-export declare const getNumberCloseToZero: (value1: number, value2: number) => number;
+export declare const getNumberCloseToZero: (
+  value1: number,
+  value2: number,
+) => number;
 
 /*
 // This is a commented out section from the original .mjs file, preserved here.
